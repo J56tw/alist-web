@@ -1,18 +1,2 @@
-[build]
-  publish = "dist"
-  command = "curl -L https://github.com/alist-org/alist/releases/latest/download/alist-linux-amd64.tar.gz | tar -zx && chmod +x alist"
-
 [build.environment]
-  GO_VERSION = "1.19"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-
-[functions]
-  directory = "functions"
-  node_bundler = "esbuild"
+  NPM_FLAGS = "--version"
